@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+:root {
+    /* paletas de colores */
+    --background: white;
+    --color-text: black;
+    --border: white;
+    --fondoblur: rgba(78, 74, 74, 0.122);
+    --fondoblurheader: rgba(255, 200, 0, 0.462);
+    --colored: rgba(241, 25, 72, 0.764);
+    --colorednone: white;
+
+    --pintado: white;
+    --fondo1: rgb(255, 227, 142);
+    --background1: linear-gradient(to right, transparent, var(--fondo1) 60%);
+    --background2: linear-gradient(to left, transparent, var(--fondo1) 60%);
+}
+
+/* ARTE  */
+
+#my-name {
+    font-family: "Fredoka One", cursive,
+        sans-serif;
+    font-size: 8vw;
+    letter-spacing: 0.15em;
+    text-shadow: 2px 2px 0px #FFB650,
+        5px 5px 0px #FFD662,
+        9px 9px 0px #FF80BF,
+        13px 13px 0px #EF5097;
+}
+
+/* FLEX */
+
+header,
+body,
+ul,
+form,
+.card-header,
+.circulos,
+.fondo,
+.circulo,
+.card, .texto {
+    display: flex;
+}
+
+form,
+.card,
+body, .texto {
+    flex-direction: column;
+}
+
+/* MEDIDAS GENERALES */
+
+.circulos,
+.all-cards,
+form,
+ul,
+section {
+    gap: 25px;
+}
+
+
+input,
+textarea,
+button {
+    padding: 10px;
+}
+
+.card,
+form, .social-media,
+#my-name{
+    padding: 20px;
+}
+
+header,
+form,
+button,
+input,
+textarea,
+.card {
+    border-radius: 1rem;
+}
+
+body {
+    background: var(--background);
+    text-align: center;
+}
+
+/* TEXTOS */
+
+body,
+a {
+    color: var(--color-text);
+}
+
+h2 {
+    padding: 30px;
+    font-size: 35px;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+ul,
+header {
+    text-decoration: none;
+    padding: 5px;
+}
+
+#my-name,
+button,
+.card-title {
+    font-weight: bold;
+}
+
+.texto.n1 {
+    align-items: center;
+    font-size: 18px;
+    width: 39vw;
+}
+
+.texto.n2 {
+    width: 21rem;
+}
+
+/* IMAGENES */
+
+.logo {
+    width: 33px;
+}
+
+.img-girl {
+    width: 30vw;
+}
+
+/* FONDOS */
+
+form,
+.card {
+    background: var(--fondoblur);
+}
+
+#home,
+#project {
+    background: var(--background1);
+}
+
+#about,
+#contact {
+    background: var(--background2);
+}
+
+/* ANIMACIONES */
+
+button,
+.card,
+.logo {
+    transition: .4s;
+}
+
+.logo:hover,
+button:hover,
+.card:hover {
+    transform: scale(1.05);
+}
+
+nav a:hover,
+i:hover {
+    color: var(--pintado);
+}
+
+svg:hover {
+    fill: var(--pintado);
+}
+
+nav a:hover {
+    border-bottom: 3px double var(--pintado);
+    border-right: 3px double var(--pintado);
+}
+
+/* NAVEGACION */
+
+header {
+    width: 95%;
+    align-self: center;
+    margin: 10px;
+    position: fixed;
+    justify-content: space-around;
+    background: var(--fondoblurheader);
+    backdrop-filter: blur(0.5rem);
+    align-items: center;
+    z-index: 1;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* SECCIONES GRID */
+
+section {
+    height: 700px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-content: center;
+}
+
+
+#project {
+    grid-template-rows: 15% auto !important;
+    grid-template-columns: none;
+}
+
+#contact {
+    grid-template-rows: 75% auto;
+}
+
+#about .img-girl {
+    grid-row-start: span 2;
+}
+
+.social-media {
+    grid-column-start: span 2;
+}
+
+/* FORMULARIO */
+
+form {
+    width: 350px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+button {
+    background: radial-gradient(var(--colorednone), var(--colored));
+}
+
+input,
+textarea {
+    border: none;
+    background: var(--colorednone);
+}
+
+::placeholder,
+input,
+button,
+textarea,
+footer a {
+    color: var(--colored);
+}
+
+header,
+form,
+button,
+.card {
+    border: 2px solid var(--border);
+}
+
+.card,
+form {
+    box-shadow: 5px 5px 10px var(--colored);
+}
+
+/* CARDS */
+
+.all-cards,
+.card {
+    justify-content: space-around;
+}
+
+.all-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(228px, auto));
+    width: 80vw;
+
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    font-size: 15px;
+}
+
+.card-links {
+    align-self: end;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-lang {
+    justify-content: center;
+}
+
+/* GRAFICOS */
+
+.fondo,
+.circulo {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+}
+
+.fondo {
+    background: var(--fondo1);
+    width: 100px;
+    height: 100px;
+}
+
+.circulo {
+    width: 120px;
+    height: 120px;
+}
+
+.circulo.n1 {
+    background-image: conic-gradient(var(--colored) 60%, var(--colorednone) 0);
+}
+
+.circulo.n2 {
+    background-image: conic-gradient(var(--colored) 40%, var(--colorednone) 0);
+}
+
+.circulo.n3 {
+    background-image: conic-gradient(var(--colored) 35%, var(--colorednone) 0);
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #my-name {
+        text-shadow: 2px 2px 0px #FFB650,
+            4px 4px 0px #FFD662,
+            6px 6px 0px #FF80BF,
+            8px 8px 0px #EF5097;
+    }
+
+    .texto.n1, .texto.n2{
+        font-size: 15px;
+    }
+
+    h2 {
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+}
