@@ -140,7 +140,7 @@ button,
     width: 33px;
 }
 
-.img-girl {
+.name {
     width: 30vw;
 }
 
@@ -230,7 +230,7 @@ section {
     grid-template-rows: 75% auto;
 }
 
-#about .img-girl {
+#about .name {
     grid-row-start: span 2;
 }
 
@@ -341,6 +341,10 @@ form {
 
 .circulo.n3 {
     background-image: conic-gradient(var(--colored) 35%, var(--colorednone) 0);
+}
+
+.circulos-names{
+    justify-content: space-around;
 }
 
 
